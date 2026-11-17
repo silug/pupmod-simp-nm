@@ -1,0 +1,15 @@
+* Tue Nov 17 2026 Steven Pritchard <steve@sicura.us> - 0.4.0
+- Publish as `simp-nm`, a fork of `lsst-nm` 0.3.0. The `nm` class and the
+  `nm::connection` defined type keep their names and parameters.
+- Restart NetworkManager when `NetworkManager.conf` changes
+- Require puppetlabs/stdlib 9 or later, for `stdlib::ensure_packages`
+
+* Sat Dec 02 2023 Joshua Hoblitt <josh@hoblitt.com> - 0.3.0
+- Add the `nm::purge_connections` parameter
+- Leave `readme-ifcfg-rh.txt` in `/etc/sysconfig/network-scripts` untouched
+
+* Tue Aug 22 2023 Joshua Hoblitt <josh@hoblitt.com> - 0.2.0
+- Allow puppet/extlib 7.x
+
+* Fri Jul 07 2023 Joshua Hoblitt <josh@hoblitt.com> - 0.1.0
+- Initial release

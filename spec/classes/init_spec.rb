@@ -17,11 +17,11 @@ describe 'nm' do
             ensure: 'directory',
             purge: true,
             recurse: true,
-            force: true
+            force: true,
           )
         end
 
-        case facts[:os]['release']['major']
+        case facts[:os][:release][:major]
         when '7', '8'
           it { is_expected.to contain_file('/etc/sysconfig/network-scripts').without_ignore }
         else
@@ -33,14 +33,14 @@ describe 'nm' do
             ensure: 'directory',
             purge: true,
             recurse: true,
-            force: true
+            force: true,
           )
         end
 
         it do
           is_expected.to contain_file('/etc/NetworkManager/NetworkManager.conf').with(
             ensure: 'file',
-            mode: '0644'
+            mode: '0644',
           )
         end
 
@@ -49,7 +49,7 @@ describe 'nm' do
             ensure: 'directory',
             purge: true,
             recurse: true,
-            force: true
+            force: true,
           )
         end
 
@@ -63,7 +63,7 @@ describe 'nm' do
               ensure: 'directory',
               purge: false,
               recurse: false,
-              force: true
+              force: true,
             )
           end
         end
@@ -74,7 +74,7 @@ describe 'nm' do
             refreshonly: true,
             timeout: 30,
             tries: 3,
-            try_sleep: 10
+            try_sleep: 10,
           )
         end
       end
