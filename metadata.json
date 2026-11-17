@@ -1,11 +1,14 @@
 {
-  "name": "lsst-nm",
-  "version": "0.3.1-rc0",
-  "author": "AURA/LSST/Rubin Observatory",
+  "name": "simp-nm",
+  "version": "0.4.0",
+  "author": "SIMP Team",
   "summary": "manages the infamous NetworkManager",
   "license": "Apache-2.0",
-  "source": "https://github.com/lsst-it/puppet-nm.git",
+  "source": "https://github.com/simp/pupmod-simp-nm",
+  "project_page": "https://github.com/simp/pupmod-simp-nm",
+  "issues_url": "https://github.com/simp/pupmod-simp-nm/issues",
   "tags": [
+    "simp",
     "keyfile",
     "networkmanager",
     "nm",
@@ -17,7 +20,7 @@
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
-      "version_requirement": ">= 7.0.0 < 10.0.0"
+      "version_requirement": ">= 9.0.0 < 10.0.0"
     },
     {
       "name": "puppet/extlib",

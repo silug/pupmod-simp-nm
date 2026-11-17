@@ -97,4 +97,3 @@ Data type: `Enum['present', 'absent']`
 If connection file should be present or absent.
 
 Default value: `'present'`
-

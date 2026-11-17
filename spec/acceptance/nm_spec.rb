@@ -4,7 +4,7 @@ require 'spec_helper_acceptance'
 
 describe 'nm class' do
   context 'without any parameters' do
-    include_examples 'the example', 'nm.pp'
+    it_behaves_like 'the example', 'nm.pp'
 
     it_behaves_like 'an idempotent resource'
 
@@ -45,14 +45,14 @@ describe 'nm class' do
   end
 
   context 'with conf parameter' do
-    include_examples 'the example', 'nm_conf.pp'
+    it_behaves_like 'the example', 'nm_conf.pp'
 
     describe file('/etc/NetworkManager/NetworkManager.conf') do
       it { is_expected.to be_file }
       it { is_expected.to be_owned_by 'root' }
       it { is_expected.to be_grouped_into 'root' }
       it { is_expected.to be_mode '644' } # serverspec does not like a leading 0
-      it { is_expected.that_notifies 'Service[NetworkManager]' }
+      it { is_expected.that_notifies 'Service[NetworkManager]' } # rubocop:disable RSpec/MissingExpectationTargetMethod
 
       its(:content) do
         is_expected.to match <<~CONTENT

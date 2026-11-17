@@ -2,10 +2,9 @@
 
 require 'spec_helper_acceptance'
 
-# rubocop:disable RSpec/RepeatedExampleGroupBody
 describe 'nm::connection' do
   context 'connection' do
-    include_examples 'the example', 'connection.pp'
+    it_behaves_like 'the example', 'connection.pp'
 
     it_behaves_like 'an idempotent resource'
 
@@ -96,7 +95,7 @@ describe 'nm::connection' do
   end
 
   context 'connection absent' do
-    include_examples 'the example', 'connection_absent.pp'
+    it_behaves_like 'the example', 'connection_absent.pp'
 
     it_behaves_like 'an idempotent resource'
 
