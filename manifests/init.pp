@@ -99,6 +99,7 @@ class nm (
     recurse => $purge_connections,
     force   => true,
     require => Package['NetworkManager'],
+    notify  => Exec['nmcli conn reload'],
   }
 
   if $connections {

@@ -44,6 +44,7 @@ describe 'nm' do
           is_expected.to contain_file('/etc/NetworkManager/system-connections')
             .with(ensure: 'directory', purge: true, recurse: true, force: true)
             .that_requires('Package[NetworkManager]')
+            .that_notifies('Exec[nmcli conn reload]')
         end
       end
 
