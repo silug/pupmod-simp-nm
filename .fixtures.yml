@@ -1,5 +1,5 @@
 ---
 fixtures:
   repositories:
-    extlib: https://github.com/voxpupuli/puppet-extlib.git
+    extlib: https://github.com/simp/pupmod-voxpupuli-extlib.git
     stdlib: https://github.com/simp/puppetlabs-stdlib.git

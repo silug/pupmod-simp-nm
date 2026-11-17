@@ -2,6 +2,7 @@
 - Publish as `simp-nm`, a fork of `lsst-nm` 0.3.0. The `nm` class and the
   `nm::connection` defined type keep their names and parameters.
 - Restart NetworkManager when `NetworkManager.conf` changes
+- Allow puppet/extlib 8.x
 - Require puppetlabs/stdlib 9 or later, for `stdlib::ensure_packages`
 
 * Sat Dec 02 2023 Joshua Hoblitt <josh@hoblitt.com> - 0.3.0
